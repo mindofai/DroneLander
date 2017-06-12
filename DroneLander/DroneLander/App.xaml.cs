@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Microsoft.Azure.Mobile;
+using Microsoft.Azure.Mobile.Analytics;
+using Microsoft.Azure.Mobile.Crashes;
 
 using Xamarin.Forms;
 
@@ -21,6 +24,9 @@ namespace DroneLander
         protected override void OnStart()
         {
             // Handle when your app starts
+            MobileCenter.Start($"android={Common.MobileCenterConstants.AndroidAppId};" +
+            $"ios={Common.MobileCenterConstants.iOSAppId}",
+               typeof(Analytics), typeof(Crashes));
         }
 
         protected override void OnSleep()
