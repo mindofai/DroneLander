@@ -6,6 +6,9 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Microsoft.Azure.Mobile;
+using Microsoft.Azure.Mobile.Analytics;
+using Microsoft.Azure.Mobile.Crashes;
 
 namespace DroneLander.Droid
 {
@@ -19,9 +22,13 @@ namespace DroneLander.Droid
 
             base.OnCreate(bundle);
 
+            MobileCenter.Start("ade1863b-4f99-459f-80ae-e15e3eae513f",
+                   typeof(Analytics), typeof(Crashes));
+
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App());
         }
+
     }
 }
 
