@@ -23,4 +23,15 @@ namespace DroneLander.Common
         public const string AndroidAppId = "ade1863b-4f99-459f-80ae-e15e3eae513f";
         public const string iOSAppId = "";
     }
+
+    public static class MobileServiceConstants
+    {
+        public const string AppUrl = "https://dronelandermobilebryan.azurewebsites.net";
+    }
+
+    public static class TelemetryConstants
+    {
+        public const string DisplayName = "Bryan Pogi";
+        public const string Tagline = "Poging pogi";
+    }
 }
